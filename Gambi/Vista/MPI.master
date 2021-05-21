@@ -1,0 +1,124 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="~/Controller/MPI.master.cs" Inherits="Vista_MPI" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>CundiHouse</title>
+    <link runat="server" href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style1 {
+            width: 100%;
+        }
+        .auto-style2 {
+            width: 198px;
+            text-align: center;
+            height: 83px;
+            background-color: black;
+        }
+        .auto-style3 {
+            width: 250px;
+            font-size: 18px;
+            text-align: center;
+            height: 83px;
+            background-color: black;
+        }
+        .auto-style3:hover {
+            font-size: 19px;
+        }
+        .auto-style4 {
+            width: 165px;
+            font-size: 18px;
+            text-align: center;
+            height: 116px;
+            background-color: black;
+        }
+        .auto-style4:hover{
+            text-decoration: underline;
+            font-size: 19px;
+        }
+        .auto-style5 {
+            height: 83px;
+            text-align: center;
+            background-color: black;
+            width: 224px;
+        }
+        .auto-style6 {
+            height: 178px;
+            text-align: center;
+        }
+        .auto-style8 {
+            height: 83px;
+            text-align: center;
+            background-color: black;
+            width: 161px;
+        }
+        .auto-style9 {
+            width: 165px;
+            font-size: 18px;
+            text-align: center;
+            height: 83px;
+            background-color: black;
+        }
+        </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <asp:ScriptManager ID="ScriptManager1" runat="server">
+    </asp:ScriptManager>
+    <div>
+        <table class="auto-style1">
+            <tr>
+                <td class="auto-style8">
+                    </td>
+                <td class="auto-style5">
+                    <img src="../Imagenes/CundiHouse.png" /></td>
+                <td class="auto-style9">
+                    </td>
+                <td class="auto-style4 text-center" style="height: 83px">
+                    <asp:HyperLink NavigateUrl="~/Vista/IniciarS.aspx" ID="HL_IS" runat="server" Font-Underline="False" ForeColor="White">Iniciar sesión</asp:HyperLink>
+                    <br />
+                    <asp:LinkButton ID="LB_P" runat="server" CssClass="text-white h6" Text="<i class='fas fa-grin-squint'></i><br/>Perfil" Visible="false" OnClick="LinkButton1_Click"></asp:LinkButton>
+                </td>
+                <td class="auto-style2">
+                    <asp:DropDownList ID="DDL_Inicio" runat="server" Width="117px" AutoPostBack="True" Font-Size="12pt" Font-Bold="False" Font-Overline="False" Font-Strikeout="False"  >
+                            <asp:ListItem>Bienvenido</asp:ListItem>
+                            <asp:ListItem>Inicio</asp:ListItem>
+                            <asp:ListItem>Inmuebles</asp:ListItem>
+                        </asp:DropDownList>
+                </td>
+                <td class="auto-style3">
+                    <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+                        <ContentTemplate>
+                            <asp:Timer ID="Timer1" runat="server" Interval="1000" OnTick="Timer1_Tick">
+                            </asp:Timer>
+                            <asp:Label ID="L_Hora" runat="server" ForeColor="White"></asp:Label>
+                        </ContentTemplate>
+                    </asp:UpdatePanel>
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style6" colspan="6">
+                    
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    
+                </td>
+            </tr>
+            <tr>
+                <td colspan="6">
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+                </td>
+            </tr>
+        </table>
+    </div>
+    </form>
+</body>
+</html>

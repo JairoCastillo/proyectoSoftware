@@ -1,0 +1,196 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="~/Controller/MPA.master.cs" Inherits="Vista_MPA" %>
+
+<!DOCTYPE html>
+
+
+<html>
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Super administrador</title>
+    <link runat="server" href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link runat="server" href="~/fontawesome-free-5.11.2-web/css/all.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style1 {
+            width: 100%;
+            height: 228px;
+            margin-left: 0px;
+        }
+        .auto-style2 {
+            background-color: #FFFFFF;
+        }
+        .auto-style3 {
+            text-align: center;
+            width: 224px;
+            height: 119px;
+            background-color: #FFFF66;
+        }
+        .auto-style8 {
+            width: 159px;
+            height: 119px;
+            background-color: #FFFF66;
+        }
+        .auto-style10 {
+            width: 159px;
+            background-color: #FFFFFF;
+            text-align: center;
+            font-size: 15px;
+            height: 150px;
+        }
+        .auto-style11:hover {
+            font-size: 16px;
+        }
+        .auto-style10:hover {
+            font-size: 16px;
+            text-decoration: underline;
+        }
+        .auto-style12 {
+            width: 159px;
+            background-color: #FFFFFF;
+            text-align: center;
+            height: 50px;
+            font-size: 15px;
+        }
+
+        .auto-style13 {
+            width: 226px;
+            height: 119px;
+            background-color: #FFFF66;
+        }
+
+        .auto-style14 {
+            height: 197px;
+        }
+
+        .auto-style15 {
+            width: 159px;
+            background-color: #FFFFFF;
+            text-align: center;
+            height: 62px;
+            font-size: 15px;
+            font-weight: bold;
+        }
+        .auto-style17 {
+            width: 159px;
+            background-color: #FFFFFF;
+            text-align: center;
+            height: 33px;
+            font-size: 15px;
+            height: 20px;
+        }
+        .auto-style17:hover{
+            font-size: 16px;
+            text-decoration: underline;
+        }
+
+        .auto-style18 {
+            width: 297px;
+            height: 119px;
+            background-color: #FFFF66;
+            text-align: center;
+            font-size: 20px;
+        }
+        .auto-style19 {
+            width: 233px;
+            height: 119px;
+            background-color: #FFFF66;
+            text-align: center;
+            font-size: 20px;
+        }
+        .botton{
+            text-align: center;
+            text-decoration: none;
+            letter-spacing: .02px;
+            border-color: #FFFF66;
+            background-color: white;
+            font-size:15px;
+            border-radius: 20px;           
+            font-weight: bold;
+            width: 150px;
+            height: 40px;
+        }
+        .botton:hover{
+            border-color: #FFFF66;
+            background-color: #FFFF66;
+        }
+        
+        .auto-style20 {
+            width: 159px;
+            background-color: #FFFFFF;
+            text-align: center;
+            height: 50px;
+            font-size: 15px;
+        }
+        
+    </style>
+</head>
+<body style="margin-top: 0px">
+    <form id="form1" runat="server">
+    <div>
+        <table class="auto-style1">
+            <tr>
+                <td class="auto-style8"></td>
+                <td class="auto-style3">
+                    &nbsp;</td>
+                <td class="auto-style13">&nbsp;</td>
+                <td class="auto-style19">
+                    </td>
+                <td class="auto-style18">
+                    <br />
+                    </td>
+                <td class="auto-style8 text-center">
+                    <asp:LinkButton CssClass="text-dark h6" Text="<i class='fas fa-door-open'></i><br/>Cerrar sesión" runat="server" OnClick="Unnamed1_Click"/>
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style15">Bienvenido
+                    <asp:Label ID="L_NMPA" runat="server"></asp:Label>
+                </td>
+                <td class="auto-style2" colspan="5" rowspan="8">
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+            <p class="auto-style14">
+            </p>
+        
+        </asp:ContentPlaceHolder>
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style17">
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style20">
+                    &nbsp;</td>
+            </tr>
+            <tr>
+                <td class="auto-style12">
+                    <asp:Button ID="B_I" CssClass="botton" runat="server" Text="Inicio" OnClick="B_I_Click" CausesValidation="false" />
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style12">
+                    <asp:Button ID="B_AS" CssClass="botton" runat="server" Text="Administrador sede" OnClick="B_AS_Click" CausesValidation="false" />
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style12">
+                    <asp:Button ID="B_S" CssClass="botton" runat="server" Text="Sede" OnClick="B_S_Click" CausesValidation="false" />
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style12">
+                    <asp:Button ID="B_H" CssClass="botton" runat="server" Text="Inmuebles" CausesValidation="false" OnClick="B_H_Click"/>
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style10">
+                    <asp:HyperLink ID="HP_VP" runat="server" Font-Bold="True" Font-Underline="False" ForeColor="Black" NavigateUrl="~/Vista/Inicio.aspx">← Volver a la página principal</asp:HyperLink>
+                </td>
+            </tr>
+        </table>
+    </div>
+    </form>
+</body>
+</html>
